@@ -1,0 +1,16 @@
+networks:
+  traefik:
+    external: true
+
+services:
+  rolldice:
+    build: .
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.rolldice.rule=Host(`dice.yaxeon.ru`)"
+      - "traefik.http.routers.rolldice.entrypoints=websecure"
+      - "traefik.http.routers.rolldice.tls.certresolver=myresolver"
+    networks:
+      - traefik

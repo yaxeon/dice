@@ -1,0 +1,5 @@
+{
+  "host": "root@49.13.133.36",
+  "name": "dice",
+  "composeFile": "docker-compose.yml"
+}
