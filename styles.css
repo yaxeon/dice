@@ -52,9 +52,9 @@ body { margin: 0; overscroll-behavior: none; }
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  /* Keep the 3D layer stable when a gesture starts or a roll finishes. */
+  will-change: transform;
 }
-.app[data-state="rolling"] .cube,
-.app[data-state="tracking"] .cube { will-change: transform; }
 .face {
   position: absolute;
   inset: 0;

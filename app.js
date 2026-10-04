@@ -67,7 +67,6 @@ function showCryptoError() {
 }
 
 function applyDrag(delta) {
-  if (Math.hypot(delta.x, delta.y) > 0) sound.tick(0, settings.count);
   if (reducedMotion.matches) {
     if (gesture?.dragging) area.style.opacity = '.8';
     return;
@@ -82,10 +81,7 @@ function finishRoll() {
   sound.stop();
   cancelAnimationFrame(frame);
   const values = roll.values;
-  dice.forEach((die, index) => {
-    die.setValue(values[index]);
-    die.setRotation(REST_ROTATION);
-  });
+  for (const die of dice) die.setRotation(REST_ROTATION);
   area.style.opacity = '';
   roll = null;
   setPhase('idle');

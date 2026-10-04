@@ -22,7 +22,7 @@ function audioContext() {
   };
 }
 
-test('loading and unlocking are silent; movement starts the sound', () => {
+test('loading and unlocking are silent; animation ticks start the sound', () => {
   const context = audioContext();
   let created = 0;
   const sound = new DiceSound(() => { created += 1; return context; });
