@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { REST_ROTATION, settleAxis, settleRotation, interpolateRotation } from '../motion.js';
+import { REST_ROTATION, settleAxis, settleRotation, interpolateRotation } from '../src/motion.js';
 
 test('settling preserves the requested direction across many turns', () => {
   for (const current of [-1080, -361, -25, 0, 359, 721, 1080]) {

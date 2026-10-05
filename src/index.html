@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="Бросай один, два или три кубика тапом или движением пальца. Работает без интернета после первого открытия.">
+    <meta name="description" content="Roll one, two, or three dice with a tap or drag. Works offline after the first visit.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Roll the dice">
@@ -18,11 +18,11 @@
   </head>
   <body>
     <main class="app" id="app" data-state="idle">
-      <section class="stage" id="stage" role="button" tabindex="0" aria-label="Бросить кубики: тапните или потяните." aria-keyshortcuts="Enter Space" aria-busy="false">
+      <section class="stage" id="stage" role="button" tabindex="0" aria-label="Roll the dice: tap or drag." aria-keyshortcuts="Enter Space" aria-busy="false">
         <div class="dice-area" id="dice-area" data-count="1" aria-hidden="true"></div>
       </section>
-      <footer class="settings" aria-label="Настройки кубиков">
-        <div class="setting" role="group" aria-label="Количество кубиков">
+      <footer class="settings" aria-label="Dice settings">
+        <div class="setting" role="group" aria-label="Number of dice">
           <svg class="setting-icon" viewBox="0 0 24 24" aria-hidden="true">
             <g stroke-width="1.25">
               <rect x="7.5" y="1" width="9" height="9" rx="1.8"/>
@@ -39,13 +39,13 @@
             </g>
           </svg>
           <div class="segments">
-            <button type="button" data-setting="count" value="1" aria-label="1 кубик" aria-pressed="true">1</button>
-            <button type="button" data-setting="count" value="2" aria-label="2 кубика" aria-pressed="false">2</button>
-            <button type="button" data-setting="count" value="3" aria-label="3 кубика" aria-pressed="false">3</button>
+            <button type="button" data-setting="count" value="1" aria-label="1 die" aria-pressed="true">1</button>
+            <button type="button" data-setting="count" value="2" aria-label="2 dice" aria-pressed="false">2</button>
+            <button type="button" data-setting="count" value="3" aria-label="3 dice" aria-pressed="false">3</button>
           </div>
         </div>
         <span class="settings-divider" aria-hidden="true"></span>
-        <div class="setting" role="group" aria-label="Количество граней">
+        <div class="setting" role="group" aria-label="Number of sides">
           <svg class="setting-icon" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="3"/>
             <g fill="currentColor" stroke="none">
@@ -55,16 +55,16 @@
             </g>
           </svg>
           <div class="segments">
-            <button type="button" data-setting="sides" value="4" aria-label="4 грани" aria-pressed="false">4</button>
-            <button type="button" data-setting="sides" value="6" aria-label="6 граней" aria-pressed="true">6</button>
-            <button type="button" data-setting="sides" value="8" aria-label="8 граней" aria-pressed="false">8</button>
-            <button type="button" data-setting="sides" value="10" aria-label="10 граней" aria-pressed="false">10</button>
+            <button type="button" data-setting="sides" value="4" aria-label="4 sides" aria-pressed="false">4</button>
+            <button type="button" data-setting="sides" value="6" aria-label="6 sides" aria-pressed="true">6</button>
+            <button type="button" data-setting="sides" value="8" aria-label="8 sides" aria-pressed="false">8</button>
+            <button type="button" data-setting="sides" value="10" aria-label="10 sides" aria-pressed="false">10</button>
           </div>
         </div>
       </footer>
       <output class="sr-only" id="result" aria-live="polite" aria-atomic="true"></output>
       <p class="error" id="error" role="alert" hidden></p>
-      <noscript><p class="error">Для броска кубиков включите JavaScript в браузере.</p></noscript>
+      <noscript><p class="error">Enable JavaScript in your browser to roll the dice.</p></noscript>
     </main>
   </body>
 </html>

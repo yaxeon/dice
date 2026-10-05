@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { DiceSound } from '../sound.js';
+import { DiceSound } from '../src/sound.js';
 
 function audioContext() {
   return {

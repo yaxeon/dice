@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "start": "python3 -m http.server 4173 --bind 127.0.0.1"
+    "start": "http-server src -a 127.0.0.1 -p 4173 -c-1 -d false"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
   }
 }

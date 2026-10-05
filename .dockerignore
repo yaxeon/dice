@@ -1,17 +1,5 @@
 # Only application files and container configuration enter the build context.
 *
 !Dockerfile
-!index.html
-!styles.css
-!app.js
-!random.js
-!settings.js
-!gesture.js
-!motion.js
-!dice.js
-!sound.js
-!manifest.webmanifest
-!sw.js
-!icons/
-!icons/*.png
-!icons/*.svg
+!src/
+!src/**

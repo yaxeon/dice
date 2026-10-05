@@ -4,8 +4,7 @@ RUN npm install --global --no-audit --no-fund http-server@14.1.1 \
     && npm cache clean --force
 
 WORKDIR /app
-COPY index.html styles.css app.js random.js settings.js gesture.js motion.js dice.js sound.js manifest.webmanifest sw.js /app/
-COPY icons/ /app/icons/
+COPY src/ /app/
 
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \

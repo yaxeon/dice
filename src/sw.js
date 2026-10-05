@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'rolldice-shell-';
-const CACHE_NAME = `${CACHE_PREFIX}v3`;
+const CACHE_NAME = `${CACHE_PREFIX}v4`;
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './random.js', './settings.js',
   './motion.js', './gesture.js', './dice.js', './sound.js', './manifest.webmanifest',

@@ -37,9 +37,9 @@ function setPhase(value) {
 }
 
 function describeResults(values = [], initial = false) {
-  const configuration = `${settings.count} ${settings.count === 1 ? 'кубик' : 'кубика'}, ${settings.sides} ${settings.sides === 4 ? 'грани' : 'граней'}.`;
-  const outcomes = values.length ? ` ${initial ? 'Начальные значения' : 'Результат'}: ${values.join(', ')}.` : ' Кубики готовы к броску.';
-  stage.setAttribute('aria-label', `Бросить кубики: тапните или потяните. ${configuration}${outcomes}`);
+  const configuration = `${settings.count} ${settings.count === 1 ? 'die' : 'dice'}, ${settings.sides} sides.`;
+  const outcomes = values.length ? ` ${initial ? 'Initial values' : 'Result'}: ${values.join(', ')}.` : ' Dice are ready to roll.';
+  stage.setAttribute('aria-label', `Roll the dice: tap or drag. ${configuration}${outcomes}`);
 }
 
 function renderSettings() {
@@ -62,7 +62,7 @@ function renderSettings() {
 }
 
 function showCryptoError() {
-  error.textContent = 'Браузер не смог получить случайные числа. Обновите страницу или откройте приложение в современном браузере.';
+  error.textContent = 'The browser could not generate random numbers. Reload the page or open the app in a modern browser.';
   error.hidden = false;
 }
 
@@ -87,7 +87,7 @@ function finishRoll() {
   setPhase('idle');
   describeResults(values);
   rollNumber += 1;
-  result.textContent = `Бросок ${rollNumber}. ${values.map((value, index) => `Кубик ${index + 1}: ${value}`).join('. ')}.`;
+  result.textContent = `Roll ${rollNumber}. ${values.map((value, index) => `Die ${index + 1}: ${value}`).join('. ')}.`;
 }
 
 function animateRoll(timestamp) {
@@ -205,7 +205,7 @@ for (const button of buttons) {
     settings = { ...settings, [key]: value };
     saveSettings(settings);
     renderSettings();
-    result.textContent = 'Настройки изменены. Кубики готовы к броску.';
+    result.textContent = 'Settings changed. Dice are ready to roll.';
   });
 }
 

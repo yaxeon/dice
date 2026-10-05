@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { loadSettings, saveSettings, validateSettings } from '../settings.js';
+import { loadSettings, saveSettings, validateSettings } from '../src/settings.js';
 
 test('saved settings restore and invalid values fall back independently', () => {
   assert.deepEqual(loadSettings(() => ({ getItem: () => '{"count":3,"sides":10}' })), { count: 3, sides: 10 });

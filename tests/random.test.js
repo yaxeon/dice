@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { randomInteger } from '../random.js';
+import { randomInteger } from '../src/random.js';
 
 function source(values) {
   let index = 0;

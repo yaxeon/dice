@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { Gesture } from '../gesture.js';
+import { Gesture } from '../src/gesture.js';
 
 const event = (x, y, timeStamp = 0, pointerId = 1) => ({ clientX: x, clientY: y, timeStamp, pointerId });
 
